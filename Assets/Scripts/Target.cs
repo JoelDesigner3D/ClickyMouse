@@ -8,11 +8,11 @@ public class Target : MonoBehaviour
     private Rigidbody targetRB;
     private GameManagerController gameManager;
 
-    private float minSpeed = 12f;
-    private float maxSpeed = 16f;
-    private float maxTorque = 10f;
-    private float xRange = 4f;
-    private float ySpawnPos = -2f;
+    private float minSpeed = 12;
+    private float maxSpeed = 16;
+    private float maxTorque = 10;
+    private float xRange = 4;
+    private float ySpawnPos = -2;
 
     public int pointValue;
     public ParticleSystem explosion;
@@ -50,6 +50,11 @@ public class Target : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         Destroy(gameObject);
+
+        if (gameObject.CompareTag("Good"))
+        {
+            gameManager.GameOver();
+        }
     }
 
 
