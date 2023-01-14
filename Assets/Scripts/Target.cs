@@ -6,6 +6,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     private Rigidbody targetRB;
+    private GameManagerController gameManager;
 
     private float minSpeed = 12f;
     private float maxSpeed = 16f;
@@ -17,6 +18,9 @@ public class Target : MonoBehaviour
     void Start()
     {
         targetRB = GetComponent<Rigidbody>();
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerController>();
+
         targetRB.AddForce(RandomForce(), ForceMode.Impulse);
         targetRB.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
         transform.position = RandomSpawnPos();
@@ -31,6 +35,7 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        gameManager.UpdateScore(5);
     }
 
     private void OnMouseUp()
