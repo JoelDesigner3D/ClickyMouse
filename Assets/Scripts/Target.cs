@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Target : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class Target : MonoBehaviour
         transform.position = RandomSpawnPos();
     }
 
-
+    /** Old input system
     private void OnMouseDown()
     {
         if (!gameManager.isGameActive)
@@ -42,11 +43,24 @@ public class Target : MonoBehaviour
         Instantiate(explosion, transform.position, explosion.transform.rotation);
         gameManager.UpdateScore(pointValue);
     }
+    */
 
-    private void OnMouseUp()
+    //New Input system
+
+    public void explodeCrate(InputAction.CallbackContext ctx)
     {
+        if (!gameManager.isGameActive)
+        {
+            return;
+        }
 
+        gameManager.PlayExplosion();
+        Destroy(gameObject);
+        Instantiate(explosion, transform.position, explosion.transform.rotation);
+        gameManager.UpdateScore(pointValue);
     }
+
+
 
     private void OnTriggerEnter(Collider collider)
     {
