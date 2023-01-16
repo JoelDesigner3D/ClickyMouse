@@ -18,6 +18,8 @@ public class GameManagerController : MonoBehaviour
     public bool isGameActive;
 
     public AudioSource explosionAudio;
+    public AudioSource gameOverAudio;
+    public AudioSource music;
 
     private int score;
     private float spawnRate = 2;
@@ -41,9 +43,17 @@ public class GameManagerController : MonoBehaviour
 
     public void GameOver()
     {
+
+        if (isGameActive)
+        {
+            gameOverAudio.Play();
+            music.Stop();
+            gameOverText.gameObject.SetActive(true);
+            restartBt.gameObject.SetActive(true);
+        }
+
         isGameActive = false;
-        gameOverText.gameObject.SetActive(true);
-        restartBt.gameObject.SetActive(true);
+
     }
 
     public void RestartGame()
