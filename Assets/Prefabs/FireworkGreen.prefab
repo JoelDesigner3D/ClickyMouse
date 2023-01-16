@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7400788070310316274}
   - component: {fileID: 804605108944177731}
   - component: {fileID: 2804642513158703030}
-  - component: {fileID: -39697819489038825}
+  - component: {fileID: 3910449646651533281}
   m_Layer: 0
-  m_Name: Firework
+  m_Name: FireworkGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1365,14 +1365,14 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.9977324, g: 1, b: 0.9519355, a: 1}
-        key1: {r: 0.9528215, g: 1, b: 0, a: 1}
-        key2: {r: 1, g: 0.5981221, b: 0, a: 0.44705883}
+        key1: {r: 0.117871106, g: 0.8113208, b: 0.15533715, a: 1}
+        key2: {r: 0.12110023, g: 0.6320754, b: 0.115681686, a: 0.44705883}
         key3: {r: 1, g: 0.5981221, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 16191
+        ctime0: 10216
         ctime1: 34310
         ctime2: 65535
         ctime3: 65535
@@ -4871,7 +4871,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &-39697819489038825
+--- !u!114 &3910449646651533281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

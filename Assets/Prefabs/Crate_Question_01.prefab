@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 5
-  explosion: {fileID: 2088871590894813759, guid: 745208c9d6e104225bd99e1ab894e3bb, type: 3}
+  explosion: {fileID: 804605108944177731, guid: c135bb8bb73db3443a909ee7d46dcaf5, type: 3}
 --- !u!114 &1156088667493868425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6749454489390415243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
