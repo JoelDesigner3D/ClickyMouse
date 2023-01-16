@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: -10
-  explosion: {fileID: 2478549635105912040, guid: ec46c8c4a3cbc429382ee48bd9169b45, type: 3}
+  explosion: {fileID: 804605108944177731, guid: 149f66121e1e73d4ab7613c6dc9e69ed, type: 3}
 --- !u!114 &4592603690416305066
 MonoBehaviour:
   m_ObjectHideFlags: 0
