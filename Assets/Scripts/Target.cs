@@ -29,11 +29,6 @@ public class Target : MonoBehaviour
         transform.position = RandomSpawnPos();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnMouseDown()
     {
@@ -42,6 +37,7 @@ public class Target : MonoBehaviour
             return;
         }
 
+        gameManager.PlayExplosion();
         Destroy(gameObject);
         Instantiate(explosion, transform.position, explosion.transform.rotation);
         gameManager.UpdateScore(pointValue);

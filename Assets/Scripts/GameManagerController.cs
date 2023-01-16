@@ -17,21 +17,11 @@ public class GameManagerController : MonoBehaviour
 
     public bool isGameActive;
 
+    public AudioSource explosionAudio;
+
     private int score;
     private float spawnRate = 2;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     IEnumerator SpawnTarget()
     {
@@ -76,5 +66,10 @@ public class GameManagerController : MonoBehaviour
         gameOverText.gameObject.SetActive(false);
 
         titleScreen.SetActive(false);
+    }
+
+    public void PlayExplosion()
+    {
+        explosionAudio.Play();
     }
 }
